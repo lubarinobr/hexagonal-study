@@ -9,4 +9,5 @@ interface RecipeRepository {
 
     fun create(recipe: Recipe): Mono<Recipe>
     fun getAll(): Flux<Recipe>
+    fun getRandomsFoods(): Flux<Recipe>
 }

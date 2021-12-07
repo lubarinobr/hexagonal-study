@@ -23,4 +23,9 @@ class RecipeController(
     fun create(@RequestBody recipeRequest: RecipeRequest): Mono<RecipeResponse> {
         return recipeFacade.create(recipeRequest)
     }
+
+    @GetMapping(value = ["/week"])
+    fun getRecipesToWeek(): Flux<RecipeResponse> {
+        return recipeFacade.getRecipesToWeek()
+    }
 }

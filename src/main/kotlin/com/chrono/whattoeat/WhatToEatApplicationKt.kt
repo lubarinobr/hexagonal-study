@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.transaction.annotation.Propagation
+import org.springframework.transaction.annotation.Transactional
 
 @SpringBootApplication
 class WhatToEatApplication(
-	@Autowired
 	val recipeRepository: IDbRecipeRepository
 ) : CommandLineRunner {
 

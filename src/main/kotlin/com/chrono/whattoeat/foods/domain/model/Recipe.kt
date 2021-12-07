@@ -10,4 +10,7 @@ data class Recipe(
     val id: String = UUID.randomUUID().toString(),
     val name: String,
     val ingredients: List<String>
-)
+) : Comparable<Recipe> {
+    override fun compareTo(other: Recipe): Int = id.compareTo(other.id)
+}
+

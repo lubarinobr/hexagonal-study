@@ -20,4 +20,8 @@ class RecipeFacade(
     fun getAll(): Flux<RecipeResponse> {
         return RecipeResponse.ofList(recipeService.findAll())
     }
+
+    fun getRecipesToWeek(): Flux<RecipeResponse> {
+        return RecipeResponse.ofList(recipeService.getListWithFoodToTheWeek())
+    }
 }
